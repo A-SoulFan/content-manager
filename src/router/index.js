@@ -22,5 +22,27 @@ export const router = createRouter({
       path: '/content/promises',
       component: Promises,
     },
+    {
+      path: "/content/secondCreationSharing",
+      name: "secondCreationSharing",
+      component: () => import("../views/SecondCreationSharing.vue"),
+      children:[
+        {
+          path: "/content/secondCreationSharing/sharingVideos",
+          name: "sharingVideos",
+          component: () => import("../views/SharingVideos.vue")
+        },
+        {
+          path: "/content/secondCreationSharing/sharingPictures",
+          name: "sharingPictures",
+          component: () => import("../views/SharingPictures.vue")
+        },
+        {
+          path: "/content/secondCreationSharing/sharingSpecialColumn",
+          name: "sharingSpecialColumn",
+          component: () => import("../views/SharingSpecialColumn.vue")
+        }
+      ]
+    },
   ],
 })

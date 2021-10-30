@@ -1,39 +1,22 @@
 <template>
-  <router-view />
+  <div class="app">
+    <div class="route-view">
+      <router-view />
+    </div>
+  </div>
 </template>
 
-<script>
-export default {
-  name: "App",
-};
-</script>
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-}
-
-.router-link-active {
-  color: orange;
-}
-
-.router-link-exact-active {
-  color: crimson;
-}
-</style>
-
-<style scoped>
-ul {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-li:not(:last-of-type) {
-  margin-right: 1rem;
-}
+  @font-face {
+    font-family: "OPPOSan-M";
+    src: url("./assets/font/OPPOSans-M.woff2");
+    font-weight: normal;
+    font-style: normal;
+  }
+  .app {
+    font-family: "OPPOSan-M", Microsoft Yahei, Times, serif;
+  }
+  .route-view {
+    padding: 0 5.83vw;
+  }
 </style>
